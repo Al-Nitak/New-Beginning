@@ -16,6 +16,25 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  // Memory optimizations for low-RAM servers
+  experimental: {
+    // Reduce memory usage during build
+    webpackBuildWorker: false,
+    // Disable memory-intensive features
+    optimizeCss: false,
+  },
+  // Reduce build parallelism to save memory
+  webpack: (config, { isServer }) => {
+    // Limit webpack parallelism for low-memory environments
+    if (process.env.LOW_MEMORY === 'true') {
+      config.parallelism = 1;
+      config.optimization = {
+        ...config.optimization,
+        minimize: true,
+      };
+    }
+    return config;
+  },
 }
 
 module.exports = nextConfig
