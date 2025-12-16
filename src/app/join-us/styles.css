@@ -1,0 +1,267 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Lora:wght@400;500;600;700&family=Amiri:wght@400;700&family=Cairo:wght@300;400;500;600;700&display=swap');
+
+/* Soft, Nurturing Color Palette - Matching Theme */
+:root {
+  --lavender: #E8D5F2;
+  --lavender-dark: #D4B8E8;
+  --pastel-teal: #B8E6E6;
+  --pastel-teal-dark: #9DD9D9;
+  --beige: #F5F1E8;
+  --beige-dark: #E8E0D1;
+  --soft-gold: #F4E4BC;
+  --soft-gold-dark: #E8D4A8;
+  --warm-white: #FEFCF7;
+  --soft-gray: #8B8B8B;
+  --text-dark: #5A5A5A;
+  --text-light: #7A7A7A;
+  --transition: all 0.3s ease;
+}
+
+/* Featured Services Box Styling */
+.featured-services-box {
+  background: var(--warm-white);
+  padding: 35px 30px;
+  border-radius: 15px;
+  text-align: center;
+  transition: var(--transition);
+  border: 2px solid transparent;
+  box-shadow: 0 4px 20px rgba(232, 213, 242, 0.1);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-services-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--lavender), var(--pastel-teal), var(--soft-gold));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.featured-services-box:hover::before {
+  transform: scaleX(1);
+}
+
+.featured-services-box:hover {
+  border-color: var(--lavender);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(232, 213, 242, 0.25);
+}
+
+.featured-services-box .icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 25px;
+  background: linear-gradient(135deg, var(--lavender), var(--pastel-teal));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(232, 213, 242, 0.3);
+}
+
+.featured-services-box:hover .icon {
+  background: linear-gradient(135deg, var(--pastel-teal-dark), var(--lavender-dark));
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 6px 20px rgba(184, 230, 230, 0.4);
+}
+
+.featured-services-box .icon i {
+  font-size: 32px;
+  color: var(--text-dark);
+  transition: var(--transition);
+}
+
+.featured-services-box:hover .icon i {
+  color: var(--text-dark);
+  transform: scale(1.1);
+}
+
+.featured-services-box h3 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--text-dark);
+  margin-bottom: 15px;
+  transition: var(--transition);
+}
+
+.featured-services-box:hover h3 {
+  color: var(--text-dark);
+}
+
+.featured-services-box p {
+  font-family: 'Lora', serif;
+  color: var(--text-light);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* Button Styling */
+.default-btn {
+  background: linear-gradient(135deg, var(--pastel-teal), var(--lavender));
+  color: var(--text-dark);
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Nunito', sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  transition: var(--transition);
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(184, 230, 230, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.default-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.default-btn:hover::before {
+  left: 100%;
+}
+
+.default-btn:hover {
+  background: linear-gradient(135deg, var(--pastel-teal-dark), var(--lavender-dark));
+  color: var(--text-dark);
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(184, 230, 230, 0.4);
+}
+
+/* Section Title Styling */
+.section-title h2 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  color: var(--text-dark);
+  position: relative;
+  margin-bottom: 15px;
+  font-size: 36px;
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--lavender), var(--pastel-teal), var(--soft-gold));
+  border-radius: 2px;
+}
+
+.section-title p {
+  font-family: 'Lora', serif;
+  color: var(--text-light);
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+
+/* Background Section */
+.bg-f8f9fa {
+  background: linear-gradient(135deg, var(--beige), var(--warm-white)) !important;
+  position: relative;
+}
+
+.bg-f8f9fa::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(232, 213, 242, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(184, 230, 230, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Contact Form Styling */
+.contact-form {
+  background: var(--warm-white);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(232, 213, 242, 0.15);
+  border: 1px solid var(--lavender);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--lavender), var(--pastel-teal), var(--soft-gold));
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form .form-control {
+  width: 100%;
+  padding: 12px 20px;
+  border: 2px solid var(--beige);
+  border-radius: 10px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  color: var(--text-dark);
+  background: var(--warm-white);
+  transition: var(--transition);
+}
+
+.contact-form .form-control:focus {
+  outline: none;
+  border-color: var(--lavender);
+  box-shadow: 0 0 0 3px rgba(232, 213, 242, 0.2);
+  background: #fff;
+}
+
+.contact-form .form-control::placeholder {
+  color: var(--text-light);
+  opacity: 0.7;
+}
+
+.contact-form textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .featured-services-box {
+    margin-bottom: 30px;
+  }
+
+  .section-title h2 {
+    font-size: 28px;
+  }
+
+  .contact-form {
+    padding: 30px 20px;
+  }
+}
+

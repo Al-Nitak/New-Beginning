@@ -1,0 +1,42 @@
+{
+  "name": "new-beginning",
+  "version": "2.3.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "build:production": "NODE_ENV=production next build --no-lint",
+    "deploy:package": "./deploy.sh",
+    "build:production": "./build-production.sh",
+    "test:production": "./setup-standalone.sh && NODE_ENV=production node .next/standalone/server.js"
+  },
+  "dependencies": {
+    "@types/aos": "^3.0.7",
+    "@types/fslightbox-react": "^1.7.7",
+    "animate.css": "^4.1.1",
+    "aos": "^2.3.4",
+    "axios": "^1.11.0",
+    "fslightbox-react": "^1.7.6",
+    "next": "^15.4.5",
+    "nodemailer": "^7.0.5",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-tabs": "^6.0.2",
+    "sass": "^1.70.0",
+    "sharp": "^0.34.3",
+    "sweetalert2": "^11.22.2",
+    "sweetalert2-react-content": "^5.1.0",
+    "swiper": "^11.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "eslint": "^9.32.0",
+    "eslint-config-next": "^15.4.5",
+    "typescript": "^5"
+  }
+}

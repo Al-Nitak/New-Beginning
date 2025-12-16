@@ -1,0 +1,298 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Lora:wght@400;500;600;700&display=swap');
+
+/* Soft, Nurturing Color Palette - Matching Theme */
+:root {
+  --lavender: #E8D5F2;
+  --lavender-dark: #D4B8E8;
+  --pastel-teal: #B8E6E6;
+  --pastel-teal-dark: #9DD9D9;
+  --beige: #F5F1E8;
+  --beige-dark: #E8E0D1;
+  --soft-gold: #F4E4BC;
+  --soft-gold-dark: #E8D4A8;
+  --warm-white: #FEFCF7;
+  --soft-gray: #8B8B8B;
+  --text-dark: #5A5A5A;
+  --text-light: #7A7A7A;
+  --error-red: #E57373;
+  --success-green: #81C784;
+  --info-blue: #64B5F6;
+  --transition: all 0.3s ease;
+}
+
+/* Auth Section */
+.auth-section {
+  background: linear-gradient(135deg, var(--beige), var(--warm-white));
+  min-height: 60vh;
+}
+
+.auth-form-wrapper {
+  background: var(--warm-white);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(232, 213, 242, 0.15);
+  border: 1px solid var(--lavender);
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-form-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--lavender), var(--pastel-teal), var(--soft-gold));
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.auth-header h2 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.auth-header p {
+  font-family: 'Lora', serif;
+  color: var(--text-light);
+  font-size: 15px;
+}
+
+/* Form Styles */
+.auth-form {
+  margin-top: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-dark);
+}
+
+.form-group .form-control {
+  width: 100%;
+  padding: 12px 20px;
+  border: 2px solid var(--beige);
+  border-radius: 10px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  color: var(--text-dark);
+  background: var(--warm-white);
+  transition: var(--transition);
+}
+
+.form-group .form-control:focus {
+  outline: none;
+  border-color: var(--lavender);
+  box-shadow: 0 0 0 3px rgba(232, 213, 242, 0.2);
+  background: #fff;
+}
+
+.form-group .form-control::placeholder {
+  color: var(--text-light);
+  opacity: 0.7;
+}
+
+/* Button Styles */
+.auth-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 14px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  justify-content: center;
+}
+
+.auth-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.auth-btn i {
+  margin-right: 8px;
+}
+
+/* Alert Styles */
+.alert {
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.alert i {
+  font-size: 20px;
+  margin-top: 2px;
+}
+
+.alert-success {
+  background: rgba(129, 199, 132, 0.1);
+  border: 2px solid var(--success-green);
+  color: #2E7D32;
+}
+
+.alert-success i {
+  color: var(--success-green);
+}
+
+.alert-error {
+  background: rgba(229, 115, 115, 0.1);
+  border: 2px solid var(--error-red);
+  color: #C62828;
+}
+
+.alert-error i {
+  color: var(--error-red);
+}
+
+.alert-info {
+  background: rgba(100, 181, 246, 0.1);
+  border: 2px solid var(--info-blue);
+  color: #1565C0;
+}
+
+.alert-info i {
+  color: var(--info-blue);
+}
+
+.alert ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.alert p {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+}
+
+/* Auth Footer */
+.auth-footer {
+  text-align: center;
+  margin-top: 25px;
+  padding-top: 25px;
+  border-top: 1px solid var(--beige);
+}
+
+.auth-footer p {
+  font-family: 'Lora', serif;
+  color: var(--text-light);
+  font-size: 14px;
+  margin: 0;
+}
+
+.auth-footer a {
+  color: var(--pastel-teal-dark);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.auth-footer a:hover {
+  color: var(--lavender-dark);
+  text-decoration: underline;
+}
+
+/* Forgot Password Link */
+.forgot-password-link {
+  color: var(--pastel-teal-dark);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.forgot-password-link:hover {
+  color: var(--lavender-dark);
+  text-decoration: underline;
+}
+
+/* Confirmation Pending Styles */
+.confirmation-pending {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.icon-wrapper {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 25px;
+  background: linear-gradient(135deg, var(--lavender), var(--pastel-teal));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(232, 213, 242, 0.3);
+}
+
+.icon-wrapper i {
+  font-size: 48px;
+  color: var(--text-dark);
+}
+
+.confirmation-pending h3 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--text-dark);
+  margin-bottom: 15px;
+}
+
+.confirmation-pending p {
+  font-family: 'Lora', serif;
+  color: var(--text-light);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.resend-section {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid var(--beige);
+}
+
+.resend-section p {
+  margin-bottom: 15px;
+  font-family: 'Nunito', sans-serif;
+  color: var(--text-light);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .auth-form-wrapper {
+    padding: 30px 20px;
+  }
+
+  .auth-header h2 {
+    font-size: 24px;
+  }
+
+  .icon-wrapper {
+    width: 80px;
+    height: 80px;
+  }
+
+  .icon-wrapper i {
+    font-size: 36px;
+  }
+}
+
